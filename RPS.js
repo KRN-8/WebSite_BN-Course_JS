@@ -12,7 +12,7 @@ setTimeout(() => {
 		playRound(i % 3, 1, 22);
 		playRound(i % 3, 2, 33);
 	}//*/
-	game(5);
+	game(5);//QQQ maybe some introduction
 }, 500);
 
 function game(rounds) {
@@ -43,8 +43,8 @@ function computerPlay() {
 function playerPlay() {
 	while (true) {
 		let playerInput = prompt("Your move:", `${RPS[0]} | ${RPS[1]} | ${RPS[2]}`);
-		if (playerInput == null) continue;// cancel the Cancel button
-		else playerInput = playerInput.toUpperCase();
+		if (playerInput == null) continue;// cancel the Cancel button QQQ game should be cancleAble
+		else playerInput = playerInput.toUpperCase();//QQQ could chose to accept spaces in between letters (just eat them)
 
 		if (playerInput.includes(RPS[0].toUpperCase()))
 			return 0;
